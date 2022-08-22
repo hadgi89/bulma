@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  
+  <title>{% block title %} Bluma {% endblock title %}</title>
+</head>
+
+
+<body>
+
+{% comment %} <section class="section header"> {% endcomment %}
+
+  {% include 'include/_header.html' %}
+
+{% comment %} </section> {% endcomment %}
+
+<section class="section content">
+  <div class="container">
+    
+    <div class="columns is-variable is-2">
+      
+      <div class="column is-8">
+        <div class="has-background-success">
+          {% block content %}{% endblock content %}
+        </div>
+        
+      </div>
+      
+      <div class="column is-4">
+        <div class="has-background-success">
+          Second column
+        </div>
+        
+      </div>
+    
+    </div>
+    
+    
+
+  </div>
+</section>
+
+{% comment %} <script src="{% static 'js/active.js' %}"></script> {% endcomment %}
+<script src="https://kit.fontawesome.com/a5a62c33e0.js" crossorigin="anonymous"></script>
+
+
+<script>
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+  
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+  
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+  
+      });
+    });
+  
+  });
+</script>
+
+</body>
+</html>

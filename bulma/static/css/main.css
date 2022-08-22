@@ -1,0 +1,37 @@
+
+:root {
+  --chakra-colors-gray-800: #1A202C;
+
+  --font-family-Roboto: 'Roboto', sans-serif;
+  
+  --font-family-Caveat: 'Caveat', cursive;
+  --font-family-NotoSans: 'Noto Sans', sans-serif;
+  --font-family-Ubuntu: 'Ubuntu', sans-serif;
+  --font-family-Nunito: 'Nunito', sans-serif;
+  
+  --font-family-SourceSansPro: 'Source Sans Pro', sans-serif;
+
+  /* display */
+
+  --font-family-Comfortaa: 'Comfortaa', cursive;
+  --font-family-Forum: 'Forum', cursive;
+  --font-family-ReggaeOne: 'Reggae One', cursive; /* + */
+  --font-family-Underdog: 'Underdog', cursive;
+  
+
+  /* mono */
+  --font-family-1: 'Roboto Mono', monospace;
+  --font-family-2: 'Source Code Pro', monospace;
+  --font-family-3: 'Ubuntu Mono', monospace;
+}
+
+
+
+.navbar .input {
+  width: 300px;
+}
+
+.navbar-brand a {
+  font-family: var(--font-family-Caveat);
+  font-size: xx-large;
+}
